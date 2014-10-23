@@ -26,11 +26,11 @@ class Application extends \Phalcon\Mvc\Application {
         $this->registerModules(array(
             'frontend' => array(
                 'className' => 'Frontend\Module',
-                'path'      => '../api/' . $version . '/modules/frontend/Module.php'
+                'path'      => '../app/' . $version . '/modules/frontend/Module.php'
             ),
             'backend'  => array(
                 'className' => 'Backend\Module',
-                'path'      => '../api/' . $version . '/modules/backend/Module.php'
+                'path'      => '../app/' . $version . '/modules/backend/Module.php'
             )
         ));
 
@@ -40,5 +40,5 @@ class Application extends \Phalcon\Mvc\Application {
 
 }
 
-$api = new Application();
-$api->useImplicitView(false)->main();
+$app = new Application();
+$app->useImplicitView(false)->main();
